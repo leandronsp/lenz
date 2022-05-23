@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BrasilNames
   class HomeController < Chespirito::Controller
     def index

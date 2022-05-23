@@ -2,5 +2,5 @@
 
 source 'https://rubygems.org'
 
-gem 'rubocop', require: false
 gem 'chespirito'
+gem 'rubocop', require: false

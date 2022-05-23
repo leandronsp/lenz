@@ -2,7 +2,7 @@
 
 require 'chespirito'
 
-Dir[File.dirname(__FILE__) + '/app/**/*.rb'].sort.each { |file| require file }
+Dir["#{File.dirname(__FILE__)}/app/**/*.rb"].sort.each { |file| require file }
 
 module BrasilNames
   def self.application

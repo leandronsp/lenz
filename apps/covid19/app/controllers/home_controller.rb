@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Covid19
   class HomeController < Chespirito::Controller
     def index
