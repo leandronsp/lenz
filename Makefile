@@ -30,3 +30,15 @@ run.tests: ## Runs the unit tests for a specific app
 	@docker-compose run \
 		--rm \
 		ruby ruby -Itest apps/${app}/test/all.rb
+
+docker.network: ## Creates the "lenz" Docker network
+	@docker network create lenz
+
+postgres: ## Runs a Postgres container
+	@bash -c "bin/postgres"
+
+app.seed: ## Seed a specific app
+	@docker-compose run \
+		--rm \
+		ruby \
+		ruby apps/${app}/lib/seeds.rb

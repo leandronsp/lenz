@@ -3,4 +3,5 @@
 source 'https://rubygems.org'
 
 gem 'chespirito'
+gem 'pg'
 gem 'rubocop', require: false

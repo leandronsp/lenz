@@ -1,0 +1,13 @@
+#!/bin/bash
+
+docker run \
+  --rm \
+  --name covid19-pg \
+  --network lenz \
+  -p 5432:5432 \
+  -e POSTGRES_PASSWORD=covid19 \
+  -e POSTGRES_USER=covid19 \
+  -e POSTGRES_DB=covid19 \
+  -e PGDATA=/var/lib/postgresql/data/pgdata \
+  -v covid19_data:/var/lib/postgresql/data/pgdata \
+  postgres

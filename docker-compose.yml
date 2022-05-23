@@ -7,6 +7,12 @@ services:
     volumes:
       - .:/app
       - rubygems:/usr/local/bundle
+    networks:
+      - lenz
 
 volumes:
   rubygems:
+
+networks:
+  lenz:
+    external: true
