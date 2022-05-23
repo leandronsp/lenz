@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'adelnor'
+require './lib/lenz'
+
+Adelnor::Server.run Lenz.application, 3000
