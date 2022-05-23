@@ -1,10 +1,10 @@
-# boilerplow
+# Lenz
 
-![Build](https://github.com/leandronsp/boilerplow/actions/workflows/build.yml/badge.svg)
+![Build](https://github.com/leandronsp/lenz/actions/workflows/build.yml/badge.svg)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rubystyle.guide)
 
-A template project for bootstrapping Ruby apps.
+Lenz for data.
 
 ## Requirements
 
