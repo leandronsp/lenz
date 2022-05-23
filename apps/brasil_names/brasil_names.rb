@@ -2,9 +2,9 @@
 
 require 'chespirito'
 
-Dir['./app/**/*.rb'].sort.each { |file| require file }
+Dir[File.dirname(__FILE__) + '/app/**/*.rb'].sort.each { |file| require file }
 
-module Lenz
+module BrasilNames
   def self.application
     Chespirito::App.configure do |app|
       app.register_route('GET', '/', [HomeController, :index])

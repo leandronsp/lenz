@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'adelnor'
+require_relative '../brasil_names'
+
+Adelnor::Server.run BrasilNames.application, 4000

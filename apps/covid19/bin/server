@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'adelnor'
+require_relative '../covid19'
+
+Adelnor::Server.run Covid19.application, 3000

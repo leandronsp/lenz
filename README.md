@@ -28,5 +28,6 @@ Usage: make <target>
   run.tests                  Runs Unit tests
   rubocop                    Runs code linter with auto-correction
   ci                         Runs code linter and unit tests in CI
-  server                     Runs the web server
+  app.server[app,port]       Runs a specific app server
+  run.tests[app]             Runs the unit tests for a specific app
 ```

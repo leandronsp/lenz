@@ -11,9 +11,6 @@ bundle.install: ## Installs the Ruby gems
 bash: ## Creates a container Bash
 	@docker-compose run --rm ruby bash
 
-run.tests: ## Runs Unit tests
-	@docker-compose run --rm ruby ruby -Itest test/all.rb
-
 rubocop: ## Runs code linter with auto-correction
 	@docker-compose run --rm ruby rubocop -A
 
@@ -21,11 +18,15 @@ ci: ## Runs code linter and unit tests in CI
 	bundle lock --add-platform x86_64-linux
 	bundle install
 	rubocop
-	ruby -Itest test/all.rb
 
-server: ## Runs the web server
+app.server: ## Runs a specific app server
 	@docker-compose run \
 		--rm \
-		--service-ports \
+		-p ${port}:${port} \
 		ruby \
-		bash -c "bin/server"
+		bash -c "apps/${app}/bin/server"
+
+run.tests: ## Runs the unit tests for a specific app
+	@docker-compose run \
+		--rm \
+		ruby ruby -Itest apps/${app}/test/all.rb

@@ -4,7 +4,7 @@ GEM
     adelnor (0.0.6)
       rack
     ast (2.4.2)
-    chespirito (0.0.1)
+    chespirito (0.0.2)
       adelnor
       rack
     parallel (1.22.1)
