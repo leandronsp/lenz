@@ -7,7 +7,7 @@ Dir["#{File.dirname(__FILE__)}/app/**/*.rb"].sort.each { |file| require file }
 module Covid19
   def self.application
     Chespirito::App.configure do |app|
-      app.register_route('GET', '/covid19/new_cases', [ReportsController, :index])
+      app.register_route('GET', '/covid19/:iso_code', [ReportsController, :index])
     end
   end
 end
